@@ -12,29 +12,32 @@
         <!--Navigation Controller-->
         <scene sceneID="dgy-Dw-ljQ">
             <objects>
-                <navigationController storyboardIdentifier="ProfileNavigationController" id="XXP-oM-ty1" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="ProfileNavigationController" modalTransitionStyle="flipHorizontal" id="XXP-oM-ty1" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MCG-oJ-Vot">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vMu-G9-QS7">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
-                        <segue destination="YXP-1D-Za9" kind="relationship" relationship="rootViewController" id="qe4-FX-gAM"/>
+                        <segue destination="gZg-c7-y13" kind="relationship" relationship="rootViewController" id="BC4-7L-cW6"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KVw-In-7th" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-972" y="89"/>
+            <point key="canvasLocation" x="-1429" y="91"/>
         </scene>
         <!--Profile-->
         <scene sceneID="Rab-Nm-A3e">
             <objects>
-                <viewController storyboardIdentifier="ProfileViewController" id="YXP-1D-Za9" customClass="ProfileViewController" customModule="LikeVK" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileViewController" modalTransitionStyle="flipHorizontal" id="YXP-1D-Za9" customClass="ProfileViewController" customModule="LikeVK" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OZq-GK-KWK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1315"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AC8-Kp-VAg">
-                                <rect key="frame" x="0.0" y="88" width="414" height="1144"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="1188"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jFB-ge-Vb5" userLabel="Content View">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1029"/>
@@ -478,7 +481,13 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="person.crop.circle" catalog="system" id="9dY-Bm-Fd7"/>
-                    <navigationItem key="navigationItem" title="Profile" id="cCO-hh-gWi"/>
+                    <navigationItem key="navigationItem" title="Profile" id="cCO-hh-gWi">
+                        <barButtonItem key="rightBarButtonItem" title="Exit" id="55U-LH-MkA">
+                            <connections>
+                                <action selector="exitButton:" destination="YXP-1D-Za9" id="SUy-cu-Fp5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <size key="freeformSize" width="414" height="1315"/>
                     <connections>
@@ -515,11 +524,11 @@
             <objects>
                 <viewController id="qe9-tP-vfd" customClass="FriendListViewController" customModule="LikeVK" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lzo-Kf-Ouu">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="top" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EGl-fg-CgW">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="sectionIndexColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="hnS-jS-aTx">
@@ -649,11 +658,11 @@
             <objects>
                 <viewController storyboardIdentifier="FriendViewController" id="Z8H-mE-Cby" customClass="FriendViewController" customModule="LikeVK" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="q71-iS-N6F">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1155"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1101"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ken-9j-uui">
-                                <rect key="frame" x="0.0" y="88" width="414" height="984"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="1018"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fNx-jO-Q5X" userLabel="Content View">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1029"/>
@@ -1087,11 +1096,90 @@
             </objects>
             <point key="canvasLocation" x="2098.5507246376815" y="89.397321428571431"/>
         </scene>
+        <!--Auth Screen View Controller-->
+        <scene sceneID="nHn-SQ-dun">
+            <objects>
+                <viewController storyboardIdentifier="AuthScreenViewController" modalTransitionStyle="flipHorizontal" id="gZg-c7-y13" customClass="AuthScreenViewController" customModule="LikeVK" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pv9-e2-sum">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="VK_Compact_Logo" translatesAutoresizingMaskIntoConstraints="NO" id="ECJ-hr-lB0">
+                                <rect key="frame" x="157" y="225.5" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="9rR-if-572"/>
+                                    <constraint firstAttribute="width" constant="100" id="pxA-Zb-oW7"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BFz-IZ-DTN">
+                                <rect key="frame" x="57" y="777" width="300" height="45"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="bZp-X5-UY6"/>
+                                    <constraint firstAttribute="width" constant="300" id="eQn-oq-gSq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="titleEdgeInsets" minX="54" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Sign in with Apple">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <imageReference key="image" image="applelogo" catalog="system" symbolScale="large"/>
+                                </state>
+                                <connections>
+                                    <action selector="signInAppleButton:" destination="gZg-c7-y13" eventType="touchUpInside" id="3KF-OK-b9d"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="fsF-6x-bhc">
+                                <rect key="frame" x="57" y="425.5" width="300" height="45"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qpr-i5-lmT">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="45"/>
+                                        <color key="backgroundColor" red="0.11381127689999999" green="0.51764339209999999" blue="0.97455316780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="doO-6e-oMJ"/>
+                                            <constraint firstAttribute="width" constant="300" id="mf8-td-5fP"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <state key="normal" title="Sign in with VK">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="logInButtonClicked:" destination="gZg-c7-y13" eventType="touchUpInside" id="TeH-9F-BRD"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="M0u-Hy-ctz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="fsF-6x-bhc" firstAttribute="top" secondItem="ECJ-hr-lB0" secondAttribute="bottom" constant="100" id="4qf-jh-Wuw"/>
+                            <constraint firstItem="fsF-6x-bhc" firstAttribute="centerX" secondItem="pv9-e2-sum" secondAttribute="centerX" id="5Oa-DR-zx2"/>
+                            <constraint firstItem="fsF-6x-bhc" firstAttribute="centerY" secondItem="pv9-e2-sum" secondAttribute="centerY" id="Vzp-VH-ThX"/>
+                            <constraint firstItem="BFz-IZ-DTN" firstAttribute="centerX" secondItem="pv9-e2-sum" secondAttribute="centerX" id="cAG-gk-uCM"/>
+                            <constraint firstItem="M0u-Hy-ctz" firstAttribute="bottom" secondItem="BFz-IZ-DTN" secondAttribute="bottom" constant="40" id="gsS-Hz-rSN"/>
+                            <constraint firstItem="ECJ-hr-lB0" firstAttribute="centerX" secondItem="pv9-e2-sum" secondAttribute="centerX" id="pkL-UG-jdL"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="fct-GK-QwX"/>
+                    <connections>
+                        <outlet property="logInButton" destination="qpr-i5-lmT" id="S9v-E7-KwA"/>
+                        <outlet property="signInWithAppleButton" destination="BFz-IZ-DTN" id="B4A-cE-zn5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ids-Dd-dmq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-687" y="90"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="egs-rg-Jif"/>
+        <segue reference="Zdw-Y4-J3W"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="VK_Compact_Logo" width="960" height="960"/>
+        <image name="applelogo" catalog="system" width="103" height="128"/>
         <image name="bell" catalog="system" width="128" height="124"/>
         <image name="briefcase" catalog="system" width="128" height="102"/>
         <image name="camera" catalog="system" width="128" height="94"/>

@@ -1,6 +1,4 @@
 import UIKit
-import CoreData
-//import Firebase
 import VK_ios_sdk
 
 @main

@@ -120,8 +120,13 @@ class VKManager : NSObject, VKSdkUIDelegate, VKSdkDelegate {
     func vkSdkWillDismiss(_ controller: UIViewController!) {
         if ((self.userDefaults.getData("vk_user_id") as? Int) != nil) {
             if let top = AppDelegate.top {
-                  let progressHUD = ProgressIndicator(text: "Загрузка данных")
-                  top.view.addSubview(progressHUD)
+                let progressHUD = ProgressIndicator(text: "Загрузка данных")
+                progressHUD.tag = 1
+                
+                DispatchQueue.main.async {
+                    top.view.addSubview(progressHUD)
+                }
+                
             }
         }
     }

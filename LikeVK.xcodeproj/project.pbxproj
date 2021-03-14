@@ -42,6 +42,7 @@
 		63F6B16A256CE93B004DC52D /* FeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63F6B168256CE93B004DC52D /* FeedTableViewCell.xib */; };
 		63F6B16D256D1AAA004DC52D /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F6B16C256D1AAA004DC52D /* FeedItem.swift */; };
 		6E44654E22EC9EFCD81F061E /* Pods_LikeVK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A0DC4AC5EBADA824814BB50 /* Pods_LikeVK.framework */; };
+		E91B7F2525F6C28300C20749 /* PopUpTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91B7F2425F6C28300C20749 /* PopUpTip.swift */; };
 		E9961F3A25EA67C60049D066 /* VKDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9961F3925EA67C60049D066 /* VKDelegate.swift */; };
 		E9961F4025EA7F110049D066 /* ProgressIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9961F3F25EA7F110049D066 /* ProgressIndicator.swift */; };
 		E9CD7E6A25E9A20E00281112 /* PersonFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CD7E6925E9A20E00281112 /* PersonFactory.swift */; };
@@ -90,6 +91,7 @@
 		63F6B168256CE93B004DC52D /* FeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedTableViewCell.xib; sourceTree = "<group>"; };
 		63F6B16C256D1AAA004DC52D /* FeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
 		E42910AF1A4B93E1F3D85A64 /* Pods-LikeVK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LikeVK.debug.xcconfig"; path = "Target Support Files/Pods-LikeVK/Pods-LikeVK.debug.xcconfig"; sourceTree = "<group>"; };
+		E91B7F2425F6C28300C20749 /* PopUpTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpTip.swift; sourceTree = "<group>"; };
 		E9961F3925EA67C60049D066 /* VKDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKDelegate.swift; sourceTree = "<group>"; };
 		E9961F3F25EA7F110049D066 /* ProgressIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressIndicator.swift; sourceTree = "<group>"; };
 		E9CD7E6925E9A20E00281112 /* PersonFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonFactory.swift; sourceTree = "<group>"; };
@@ -396,6 +398,7 @@
 		E96434BC25EC5D6300BF3395 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				E91B7F2425F6C28300C20749 /* PopUpTip.swift */,
 				E9961F3F25EA7F110049D066 /* ProgressIndicator.swift */,
 			);
 			path = Helpers;
@@ -579,6 +582,7 @@
 				0FB177D6258E50E40057FBB5 /* ExtensionProfileVC.swift in Sources */,
 				63BF7ADA2554166D002199A5 /* User.swift in Sources */,
 				63E6893025545726000290F2 /* ExtensionTextField.swift in Sources */,
+				E91B7F2525F6C28300C20749 /* PopUpTip.swift in Sources */,
 				63F6B16D256D1AAA004DC52D /* FeedItem.swift in Sources */,
 				0F0F46D525AA1A96004F969C /* PersonalInfo.swift in Sources */,
 				63AAF20D2549B4E60082A43D /* AppDelegate.swift in Sources */,
@@ -723,15 +727,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = U96DY3US7J;
+				CURRENT_PROJECT_VERSION = 6;
+				DEVELOPMENT_TEAM = D2G76PHL29;
 				INFOPLIST_FILE = LikeVK/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dmitridad.likevk;
+				PRODUCT_BUNDLE_IDENTIFIER = com.orbsoft.likevk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -743,15 +750,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = U96DY3US7J;
+				CURRENT_PROJECT_VERSION = 6;
+				DEVELOPMENT_TEAM = D2G76PHL29;
 				INFOPLIST_FILE = LikeVK/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dmitridad.likevk;
+				PRODUCT_BUNDLE_IDENTIFIER = com.orbsoft.likevk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

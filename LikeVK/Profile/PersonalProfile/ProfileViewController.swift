@@ -1,5 +1,6 @@
 
 import UIKit
+import VK_ios_sdk
 
 class ProfileViewController: UIViewController {
     
@@ -11,6 +12,7 @@ class ProfileViewController: UIViewController {
     var personalInfo: PersonalInfo?
     var friends = [Friend]()
     var realm = RealmHelper()
+    var userDefaults = UserDefaultsHelper()
     
     @IBOutlet weak var mainPhotoImageView: UIImageView!
     @IBOutlet weak var nameSurnameLabel: UILabel!
@@ -36,6 +38,8 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationItem.hidesBackButton = true
             
         // Получаем личные данные из хранилища
         if let personalInfo = self.realm.getPersonalInfo() {
@@ -72,8 +76,18 @@ class ProfileViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        
+                
         self.updateFriendsCount()
+    }
+    
+    /// Сброс всех данных входа для VK
+    @IBAction func exitButton(_ sender: UIBarButtonItem) {
+        VKSdk.forceLogout()
+        
+        userDefaults.deleteData(key: "vk_user_id")
+        userDefaults.deleteData(key: "vk_access_token")
+        
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

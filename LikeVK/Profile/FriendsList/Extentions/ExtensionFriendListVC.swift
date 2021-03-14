@@ -12,7 +12,11 @@ extension FriendListViewController: UITableViewDelegate, UITableViewDataSource {
         
         switch section {
             case 0:
-                rowCount = 5
+                if self.friends.count >= 5 {
+                    rowCount = 5
+                } else {
+                    rowCount = self.friends.count
+                }
             default:
                 rowCount = self.friends.count
         }
